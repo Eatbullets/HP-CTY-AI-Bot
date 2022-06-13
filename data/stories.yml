@@ -1,0 +1,86 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: faq path about HPE
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: FAQ_about_HPE
+  - action: utter_hpe_info
+
+- story: faq path about CVE-2012-3274
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: FAQ_about_CVE_2012_3274
+  - action: utter_CVE_2012_3274_info
+
+- story: faq path about aruba
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: FAQ_about_aruba
+  - action: utter_aruba_info
+
+- story: faq path about CVE-2022-21131
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: FAQ_about_CVE_2022_21131
+  - action: utter_CVE_2022_21131_info
+
+- story: faq path about CVE-2022-0005
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: FAQ_about_CVE_2022_0005
+  - action: utter_CVE_2022_0005_info
+
+- story: faq path about CVE-2022-0154
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: FAQ_about_CVE_2022_0154
+  - action: utter_CVE_2022_0154_info
+
+- story: joke path
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: random_joke
+  - action: utter_joke
+
+- story: faw path about CVE-2022-0190
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: FAQ_about_CVE_2021_0190
+  - action: utter_CVE_2021_0190_info

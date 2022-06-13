@@ -1,0 +1,86 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - FAQ_about_HPE
+  - FAQ_about_CVE_2012_3274
+  - FAQ_about_aruba
+  - FAQ_about_CVE_2022_21131
+  - FAQ_about_CVE_2022_0005
+  - FAQ_about_CVE_2022_0154
+  - random_joke
+  - FAQ_about_CVE_2021_0190
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_hpe_info:
+    - text: "The Hewlett Packard Enterprise Company is an American multinational enterprise information technology company based in Spring, Texas, United States. HPE was founded on November 1, 2015, in Palo Alto, California, as part of the splitting of the Hewlett-Packard company."
+    - text: "HPE was created in October 2014 when Hewlett Packard (HP) announced that it would split its traditional PC and printers business from its enterprise products and services, as HP Inc. and Hewlett Packard Enterprise, respectively. The company was incorporated as Hewlett Packard Enterprise Company on February 15, 2015."
+    - text: "HPE is the global edge-to-cloud company built to transform your business by helping you connect, protect, analyse and act on all your data & apps wherever they live, from edge to cloud, so you can turn insights into outcomes at the speed required to thrive in today's complex world "
+
+  utter_CVE_2012_3274_info:
+    - text: "VULNERABILITY SUMMARY: A potential security vulnerability has been identified with HP Intelligent Management Center User Access Manager (UAM). The vulnerability could be remotely exploited resulting in the execution of arbitrary code.
+    Potential Security Impact: Remote execution of arbitrary code
+    Source: Hewlett Packard Enterprise, HPE Product Security Response Team
+    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=emr_na-c03589863"
+  
+  utter_aruba_info:
+    - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbnw04308en_us"
+  
+  utter_CVE_2022_21131_info:
+    - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04297en_us 
+    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04293en_us
+    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04289en_us
+    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04315en_us
+    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04301en_us
+    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbst04295en_us"
+  
+  utter_CVE_2022_0005_info:
+    - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04288en_us"
+
+  utter_CVE_2022_0154_info:
+    - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04292en_us"
+  
+  utter_joke:
+    - text: "What do you call a fake noodle? An Impasta!"
+    - text: "My wife told me to stop impersonating a flamingo. I had to put my foot down."
+    - text: "I went to buy some camo pants but couldnt find any."
+    - text: "I failed math so many times at school, I cant even count."
+    - text: "I used to have a handle on life, but then it broke."
+    - text: "I was wondering why the frisbee kept getting bigger and bigger, but then it hit me."
+    - text: "I heard there were many break-ins over at the car park. That is wrong on so many levels."
+    - text: "I want to die peacefully in my sleep, like my grandfather… Not screaming and yelling like the passengers in his car."
+    - text: "When life gives you melons, you might be dyslexic."
+    - text: "Dont you hate it when someone answers their own questions? I do."
+    - text: "It takes a lot of balls to golf the way I do."
+  
+  utter_CVE_2021_0190_info:
+    - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbst04294en_us"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

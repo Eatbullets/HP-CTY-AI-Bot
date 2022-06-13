@@ -1,0 +1,171 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - GM
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - good Morning
+    - good Evening
+    - good Afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - sure
+    - ok
+    - yep
+    - yup
+    - fine
+    - cool
+    - done 
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - nah
+    - nope
+    - no thanks
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: FAQ_about_HPE
+  examples: |
+    - what is HPE?
+    - what is HP Enterprise?
+    - what is HP Enterprise Cloud?
+    - what does HP do?
+
+- intent: FAQ_about_CVE_2012_3274
+  examples: |
+    - what is CVE-2012-3274?
+    - what is the vulnerability in CVE-2012-3274?
+    - drawbacks of CVE-2012-3274?
+    - what is the impact of CVE-2012-3274?
+    - why is CVE-2012-3274 a security issue?
+    - vulnerability in HP intelligent Management Centre UAM?
+    - drawback of HP intelligent Management Centre UAM?
+
+- intent: FAQ_about_aruba
+  examples: |
+    - what is the vulnerability in aruba products?
+    - what are the security risks of aruba products?
+    - security risks in aruba products?
+    - drawbacks of aruba products?
+
+- intent: FAQ_about_CVE_2022_21131
+  examples: |
+    - what is the vulnerability in CVE-2022-21131?
+    - what is the impact of CVE-2022-21131?
+    - what is the security risk of CVE-2022-21131?
+    - vulnerability in HPE Synergy Servers Using Intel Xeon Processors?
+    - security risk in HPE Synergy Servers Using Intel Xeon Processors?
+    - drawback of HPE Synergy Servers Using Intel Xeon Processors?
+
+- intent: FAQ_about_CVE_2022_0005
+  examples: |
+    - what is the vulnerability in CVE-2022-0005?
+    - what is the impact of CVE-2022-0005?
+    - what is the security risk of CVE-2022-0005?
+    - vulnerability in HPE ProLiant server using Intel processor SGX?
+    - security risk in HPE ProLiant server using Intel processor SGX?
+    - drawback of HPE ProLiant server using Intel processor SGX?
+
+- intent: FAQ_about_CVE_2022_0154
+  examples: |
+    - what is the vulnerability in CVE-2022-0154?
+    - what is the impact of CVE-2022-0154?
+    - what is the security risk of CVE-2022-0154?
+    - vulnerability in HPE Synergy Servers using Intel Processor BIOS?
+    - security risk in HPE Synergy Servers using Intel Processor BIOS?
+    - drawback of HPE Synergy Servers using Intel Processor BIOS?
+
+- intent: FAQ_about_CVE_2021_0190
+  examples: |
+    - what is the vulnerability in CVE-2021-0190?
+    - what is the impact of CVE-2021-0190?
+    - what is the security risk of CVE-2021-0190?
+    - vulnerability in  HPE Storage Products using Intel Processor BIOS?
+    - security risk in HPE Storage products using Intel processor BIOS?
+    - drawback of HPE Storage products using Intel processsor BIOS?
+
+- intent: random_joke
+  examples: |
+    - tell me a joke
+    - tell me a random joke
+    - I am bored
+    - Light up my day
+    - Tickle my funny bone
+    - Make me laugh
+    - Give me a pun

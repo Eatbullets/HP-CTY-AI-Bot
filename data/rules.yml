@@ -1,0 +1,53 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: What does HP do
+  steps: 
+  - intent: FAQ_about_HPE
+  - action: utter_hpe_info
+
+- rule: CVE-2012-3274 vulnerability
+  steps: 
+  - intent: FAQ_about_CVE_2012_3274
+  - action: utter_CVE_2012_3274_info
+
+- rule: aruba security issues
+  steps: 
+  - intent: FAQ_about_aruba
+  - action: utter_aruba_info
+
+- rule: CVE-2022-21131 vulnerability
+  steps:
+  - intent: FAQ_about_CVE_2022_21131
+  - action: utter_CVE_2022_21131_info
+
+- rule: CVE-2022-0005 vulnerability
+  steps:
+  - intent: FAQ_about_CVE_2022_0005
+  - action: utter_CVE_2022_0005_info
+
+- rule: CVE-2022-0154 vulnerability
+  steps:
+  - intent: FAQ_about_CVE_2022_0154
+  - action: utter_CVE_2022_0154_info
+
+- rule: random joke
+  steps:
+  - intent: random_joke
+  - action: utter_joke
+
+- rule: CVE-2021-0190 vulnerability
+  steps:
+  - intent: FAQ_about_CVE_2021_0190
+  - action: utter_CVE_2021_0190_info

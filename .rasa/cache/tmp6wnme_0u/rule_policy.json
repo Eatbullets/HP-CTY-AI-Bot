@@ -1,0 +1,34 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2022-0005\"}}]": "utter_CVE-2022-0005_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2022-0005\"}}, {\"prev_action\": {\"action_name\": \"utter_CVE-2022-0005_info\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2022-0005\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2012-3274\"}}]": "utter_CVE-2012-3274_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2012-3274\"}}, {\"prev_action\": {\"action_name\": \"utter_CVE-2012-3274_info\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2012-3274\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_HPE\"}}]": "utter_hpe_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_HPE\"}}, {\"prev_action\": {\"action_name\": \"utter_hpe_info\"}, \"user\": {\"intent\": \"FAQ_about_HPE\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2022-21131\"}}]": "utter_CVE-2022-21131_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2022-21131\"}}, {\"prev_action\": {\"action_name\": \"utter_CVE-2022-21131_info\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2022-21131\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_aruba\"}}]": "utter_aruba_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_aruba\"}}, {\"prev_action\": {\"action_name\": \"utter_aruba_info\"}, \"user\": {\"intent\": \"FAQ_about_aruba\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2022-0154\"}}]": "utter_CVE-2022-0154_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2022-0154\"}}, {\"prev_action\": {\"action_name\": \"utter_CVE-2022-0154_info\"}, \"user\": {\"intent\": \"FAQ_about_CVE-2022-0154\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent restart",
+      "predicting default action with intent back"
+    ]
+  }
+}
