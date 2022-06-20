@@ -9,13 +9,13 @@ intents:
   - mood_unhappy
   - bot_challenge
   - FAQ_about_HPE
-  - FAQ_about_CVE_2012_3274
-  - FAQ_about_aruba
-  - FAQ_about_CVE_2022_21131
-  - FAQ_about_CVE_2022_0005
-  - FAQ_about_CVE_2022_0154
+  - IM_centre
+  - aruba
+  - synergy_using_intel_xeon
+  - proliant_using_intel
+  - synergy_using_intel
+  - storage_using_intel
   - random_joke
-  - FAQ_about_CVE_2021_0190
 
 responses:
   utter_greet:
@@ -43,13 +43,96 @@ responses:
     - text: "HPE is the global edge-to-cloud company built to transform your business by helping you connect, protect, analyse and act on all your data & apps wherever they live, from edge to cloud, so you can turn insights into outcomes at the speed required to thrive in today's complex world "
 
   utter_CVE_2012_3274_info:
-    - text: "VULNERABILITY SUMMARY: A potential security vulnerability has been identified with HP Intelligent Management Center User Access Manager (UAM). The vulnerability could be remotely exploited resulting in the execution of arbitrary code.
-    Potential Security Impact: Remote execution of arbitrary code
-    Source: Hewlett Packard Enterprise, HPE Product Security Response Team
+    - text: "VULNERABILITY SUMMARY: A potential security vulnerability has been identified with HP Intelligent Management Center User Access Manager (UAM). The vulnerability could be remotely exploited resulting in the execution of arbitrary code. \n
+    
+    Potential Security Impact: Remote execution of arbitrary code \n
+    Source: Hewlett Packard Enterprise, HPE Product Security Response Team \n
+
     https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=emr_na-c03589863"
   
   utter_aruba_info:
-    - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbnw04308en_us"
+    - text: "
+      SECURITY BULLETIN
+      Document ID: hpesbnw04308en_us
+
+      Version: 2
+
+      HPESBNW04308 rev.2 - Aruba Products, Multiple Vulnerabilities
+      NOTICE: The information in this Security Bulletin should be acted upon as soon as possible.
+      Release Date: 2022-05-17
+
+      Last Updated: 2022-06-02
+
+      Potential Security Impact: Remote: Arbitrary Code Execution, Denial of Service (DoS)
+
+      Source: Hewlett Packard Enterprise, HPE Product Security Response Team
+
+      VULNERABILITY SUMMARY: Multiple Vulnerabilities in Expat XML processing library
+
+      Note: Information originally published in ARUBA-PSA-2022-010  Non-HPE site
+
+      Aruba Product Security Advisory
+      ===============================
+      Advisory ID: ARUBA-PSA-2022-010
+      CVE: CVE-2022-25235, CVE-2022-25236, CVE-2022-25313,
+      CVE-2022-25314, CVE-2022-25315
+      Publication Date: 2022-May-17
+      Last Update: 2022-Jun-01
+      Status: Investigating
+      Severity: Critical
+      Revision: 2
+      Overview
+
+      Multiple CVEs have been disclosed that involve the faulty handling of XML input by the Expat application and library. These CVEs impact multiple Aruba products.
+
+      Details can be found at: 
+
+      https://nvd.nist.gov/vuln/detail/CVE-2022-25235  (Non-HPE site)
+      https://nvd.nist.gov/vuln/detail/CVE-2022-25236  (Non-HPE site)
+      https://nvd.nist.gov/vuln/detail/CVE-2022-25313  (Non-HPE site)
+      https://nvd.nist.gov/vuln/detail/CVE-2022-25314  (Non-HPE site)
+      https://nvd.nist.gov/vuln/detail/CVE-2022-25315  (Non-HPE site)
+
+      Affected Products
+      AirWave Management Platform
+      8.2.14.0 and below
+      Aruba Fabric Composer (AFC) and Plexxi Composable Fabric Manager (CFM)
+      6.2.0 and below
+      Aruba ClearPass Policy Manager
+      6.10.4 and below
+      6.9.10 and below
+      6.8.9 without Hotfix for Q1 2022 Security issues
+      Aruba EdgeConnect Enterprise
+      ECOS 9.1.1.3 and below
+      ECOS 9.0.6.0 and below
+      ECOS 8.3.6.0 and below
+      Impact of this vulnerability on ECOS is very low.
+      Aruba EdgeConnect Enterprise Orchestrator (on-premises)
+
+      See resolution section for details
+
+      Products Under Investigation
+      Aruba Analytics and Location Engine
+      Aruba Central / Central On-Premises
+      ArubaOS Wi-Fi Controllers and Gateways
+      ArubaOS SD-WAN Gateways
+      ArubaOS-CX Switches
+      Aruba VIA Client
+
+      Unaffected Products
+      Aruba Instant / Aruba Instant Access Points
+      Aruba Instant On
+      Aruba IntroSpect
+      Aruba NetEdit
+      Aruba User Experience Insight (UXI)
+      ArubaOS-S Switches
+      Aruba EdgeConnect Enterprise Orchestrator-as-a-Service
+      Aruba EdgeConnect Enterprise Orchestrator-SP
+      Aruba EdgeConnect Enterprise Orchestrator Global Enterprise
+      Other Aruba products not listed above are also not known to be affected by these vulnerabilities.
+
+
+    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbnw04308en_us"
   
   utter_CVE_2022_21131_info:
     - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04297en_us 
@@ -60,10 +143,26 @@ responses:
     https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbst04295en_us"
   
   utter_CVE_2022_0005_info:
-    - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04288en_us"
+    - text: "VULNERABILITY SUMMARY: A security vulnerability in HPE ProLiant Servers for some Intel Processors with Software Guard Extensions (SGX) could be physically exploited to allow disclosure of information. For more information on this vulnerability, please see Intel Security Advisory INTEL-SA-00614, 2022.1 IPU Intel SGX Advisory.
+    
+    Potential Security Impact: Local: Disclosure of Information
+    Source: Hewlett Packard Enterprise, HPE Product Security Response Team
+    
+    RESOLUTION: HPE has provided updated BIOS firmware to address this vulnerability in Software Guard Extensions (SGX).
+    Download the firmware for your product on HPE Support Center.
+    
+    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04288en_us"
 
   utter_CVE_2022_0154_info:
-    - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04292en_us"
+    - text: "VULNERABILITY SUMMARY: Security vulnerabilities in HPE Synergy Servers using certain Intel processors could be locally exploited to allow escalation of privilege, or disclosure of information. For more information on these vulnerabilities, please see Intel Security Advisory INTEL-SA-00601, 2022.1 IPU Intel BIOS Advisory. \n 
+    
+    Potential Security Impact: Local: Disclosure of Information, Escalation of Privilege \n
+    Source: Hewlett Packard Enterprise, HPE Product Security Response Team \n
+    
+    RESOLUTION: HPE has provided some specific System BIOS versions to address the vulnerabilities identified above:
+    Download the firmware for your product on HPE Support Center.
+
+    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04292en_us"
   
   utter_joke:
     - text: "What do you call a fake noodle? An Impasta!"
@@ -79,8 +178,12 @@ responses:
     - text: "It takes a lot of balls to golf the way I do."
   
   utter_CVE_2021_0190_info:
-    - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbst04294en_us"
+    - text: "VULNERABILITY SUMMARY: Security vulnerabilities in HPE storage products using certain Intel processors could be locally exploited to allow escalation of privilege or disclosure of information. For more information on these vulnerabilities, please see Intel Security Advisory INTEL-SA-00601, 2022.1 IPU Intel BIOS Advisory. \n
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+    Potential Security Impact: Local: Disclosure of Information, Escalation of Privilege
+    Source: Hewlett Packard Enterprise, HPE Product Security Response Team \n \n
+
+    RESOLUTION: HPE has provided updated firmware to address these vulnerabilities in Intel BIOS reference code firmware.
+    Download the firmware for your product on HPE Support Center. \n
+    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbst04294en_us"
+294en_us"

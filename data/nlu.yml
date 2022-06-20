@@ -107,7 +107,7 @@ nlu:
     - what is HP Enterprise Cloud?
     - what does HP do?
 
-- intent: FAQ_about_CVE_2012_3274
+- intent: IM_centre
   examples: |
     - what is CVE-2012-3274?
     - what is the vulnerability in CVE-2012-3274?
@@ -117,14 +117,14 @@ nlu:
     - vulnerability in HP intelligent Management Centre UAM?
     - drawback of HP intelligent Management Centre UAM?
 
-- intent: FAQ_about_aruba
+- intent: aruba
   examples: |
     - what is the vulnerability in aruba products?
     - what are the security risks of aruba products?
     - security risks in aruba products?
     - drawbacks of aruba products?
 
-- intent: FAQ_about_CVE_2022_21131
+- intent: synergy_using_intel_xeon
   examples: |
     - what is the vulnerability in CVE-2022-21131?
     - what is the impact of CVE-2022-21131?
@@ -133,7 +133,7 @@ nlu:
     - security risk in HPE Synergy Servers Using Intel Xeon Processors?
     - drawback of HPE Synergy Servers Using Intel Xeon Processors?
 
-- intent: FAQ_about_CVE_2022_0005
+- intent: proliant_using_intel
   examples: |
     - what is the vulnerability in CVE-2022-0005?
     - what is the impact of CVE-2022-0005?
@@ -142,7 +142,7 @@ nlu:
     - security risk in HPE ProLiant server using Intel processor SGX?
     - drawback of HPE ProLiant server using Intel processor SGX?
 
-- intent: FAQ_about_CVE_2022_0154
+- intent: synergy_using_intel
   examples: |
     - what is the vulnerability in CVE-2022-0154?
     - what is the impact of CVE-2022-0154?
@@ -151,7 +151,7 @@ nlu:
     - security risk in HPE Synergy Servers using Intel Processor BIOS?
     - drawback of HPE Synergy Servers using Intel Processor BIOS?
 
-- intent: FAQ_about_CVE_2021_0190
+- intent: storage_using_intel
   examples: |
     - what is the vulnerability in CVE-2021-0190?
     - what is the impact of CVE-2021-0190?
