@@ -19,35 +19,35 @@ rules:
 
 - rule: CVE-2012-3274 vulnerability
   steps: 
-  - intent: IM_centre
+  - intent: FAQ_about_CVE_2012_3274
   - action: utter_CVE_2012_3274_info
 
 - rule: aruba security issues
   steps: 
-  - intent: aruba
+  - intent: FAQ_about_aruba
   - action: utter_aruba_info
 
 - rule: CVE-2022-21131 vulnerability
   steps:
-  - intent: synergy_using_intel_xeon
+  - intent: FAQ_about_CVE_2022_21131
   - action: utter_CVE_2022_21131_info
 
 - rule: CVE-2022-0005 vulnerability
   steps:
-  - intent: proliant_using_intel
+  - intent: FAQ_about_CVE_2022_0005
   - action: utter_CVE_2022_0005_info
 
 - rule: CVE-2022-0154 vulnerability
   steps:
-  - intent: synergy_using_intel
+  - intent: FAQ_about_CVE_2022_0154
   - action: utter_CVE_2022_0154_info
-
-- rule: CVE-2021-0190 vulnerability
-  steps:
-  - intent: storage_using_intel
-  - action: utter_CVE_2021_0190_info
 
 - rule: random joke
   steps:
   - intent: random_joke
   - action: utter_joke
+
+- rule: CVE-2021-0190 vulnerability
+  steps:
+  - intent: FAQ_about_CVE_2021_0190
+  - action: utter_CVE_2021_0190_info

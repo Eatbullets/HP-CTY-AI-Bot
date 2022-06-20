@@ -40,43 +40,36 @@ stories:
   steps: 
   - intent: greet
   - action: utter_greet
-  - intent: IM_centre
+  - intent: FAQ_about_CVE_2012_3274
   - action: utter_CVE_2012_3274_info
 
 - story: faq path about aruba
   steps: 
   - intent: greet
   - action: utter_greet
-  - intent: aruba
+  - intent: FAQ_about_aruba
   - action: utter_aruba_info
 
 - story: faq path about CVE-2022-21131
   steps: 
   - intent: greet
   - action: utter_greet
-  - intent: synergy_using_intel_xeon
+  - intent: FAQ_about_CVE_2022_21131
   - action: utter_CVE_2022_21131_info
 
 - story: faq path about CVE-2022-0005
   steps: 
   - intent: greet
   - action: utter_greet
-  - intent: proliant_using_intel
+  - intent: FAQ_about_CVE_2022_0005
   - action: utter_CVE_2022_0005_info
 
 - story: faq path about CVE-2022-0154
   steps: 
   - intent: greet
   - action: utter_greet
-  - intent: synergy_using_intel
+  - intent: FAQ_about_CVE_2022_0154
   - action: utter_CVE_2022_0154_info
-
-- story: faw path about CVE-2022-0190
-  steps: 
-  - intent: greet
-  - action: utter_greet
-  - intent: storage_using_intel
-  - action: utter_CVE_2021_0190_info
 
 - story: joke path
   steps: 
@@ -85,3 +78,9 @@ stories:
   - intent: random_joke
   - action: utter_joke
 
+- story: faw path about CVE-2022-0190
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: FAQ_about_CVE_2021_0190
+  - action: utter_CVE_2021_0190_info
