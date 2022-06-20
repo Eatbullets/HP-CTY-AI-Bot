@@ -16,174 +16,212 @@ intents:
   - synergy_using_intel
   - storage_using_intel
   - random_joke
+  - inform
+  - authentication
+
+entities:
+  - email
+  - number
+
+slots:
+  email:
+    type: text
+    influence_conversation: false
+  otp:
+    type: text
+    influence_conversation: false
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+    utter_greet:
+    - text: "Hey! How are you?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+    utter_did_that_help:
+    - text: "Did that help you?"
 
-  utter_happy:
-  - text: "Great, carry on!"
+    utter_happy:
+    - text: "Great, carry on!"
 
-  utter_goodbye:
-  - text: "Bye"
+    utter_goodbye:
+    - text: "Bye"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
 
-  utter_hpe_info:
-    - text: "The Hewlett Packard Enterprise Company is an American multinational enterprise information technology company based in Spring, Texas, United States. HPE was founded on November 1, 2015, in Palo Alto, California, as part of the splitting of the Hewlett-Packard company."
-    - text: "HPE was created in October 2014 when Hewlett Packard (HP) announced that it would split its traditional PC and printers business from its enterprise products and services, as HP Inc. and Hewlett Packard Enterprise, respectively. The company was incorporated as Hewlett Packard Enterprise Company on February 15, 2015."
-    - text: "HPE is the global edge-to-cloud company built to transform your business by helping you connect, protect, analyse and act on all your data & apps wherever they live, from edge to cloud, so you can turn insights into outcomes at the speed required to thrive in today's complex world "
+    utter_hpe_info:
+      - text: "The Hewlett Packard Enterprise Company is an American multinational enterprise information technology company based in Spring, Texas, United States. HPE was founded on November 1, 2015, in Palo Alto, California, as part of the splitting of the Hewlett-Packard company."
+      - text: "HPE was created in October 2014 when Hewlett Packard (HP) announced that it would split its traditional PC and printers business from its enterprise products and services, as HP Inc. and Hewlett Packard Enterprise, respectively. The company was incorporated as Hewlett Packard Enterprise Company on February 15, 2015."
+      - text: "HPE is the global edge-to-cloud company built to transform your business by helping you connect, protect, analyse and act on all your data & apps wherever they live, from edge to cloud, so you can turn insights into outcomes at the speed required to thrive in today's complex world "
 
-  utter_CVE_2012_3274_info:
-    - text: "VULNERABILITY SUMMARY: A potential security vulnerability has been identified with HP Intelligent Management Center User Access Manager (UAM). The vulnerability could be remotely exploited resulting in the execution of arbitrary code. \n
-    
-    Potential Security Impact: Remote execution of arbitrary code \n
-    Source: Hewlett Packard Enterprise, HPE Product Security Response Team \n
+    utter_CVE_2012_3274_info:
+      - text: "VULNERABILITY SUMMARY: A potential security vulnerability has been identified with HP Intelligent Management Center User Access Manager (UAM). The vulnerability could be remotely exploited resulting in the execution of arbitrary code. \n
+      
+      Potential Security Impact: Remote execution of arbitrary code \n
+      Source: Hewlett Packard Enterprise, HPE Product Security Response Team \n
 
-    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=emr_na-c03589863"
-  
-  utter_aruba_info:
-    - text: "
-      SECURITY BULLETIN
-      Document ID: hpesbnw04308en_us
+      https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=emr_na-c03589863"
 
-      Version: 2
+    utter_aruba_info:
+      - text: "
+        SECURITY BULLETIN
+        Document ID: hpesbnw04308en_us
 
-      HPESBNW04308 rev.2 - Aruba Products, Multiple Vulnerabilities
-      NOTICE: The information in this Security Bulletin should be acted upon as soon as possible.
-      Release Date: 2022-05-17
+        Version: 2
 
-      Last Updated: 2022-06-02
+        HPESBNW04308 rev.2 - Aruba Products, Multiple Vulnerabilities
+        NOTICE: The information in this Security Bulletin should be acted upon as soon as possible.
+        Release Date: 2022-05-17
 
-      Potential Security Impact: Remote: Arbitrary Code Execution, Denial of Service (DoS)
+        Last Updated: 2022-06-02
 
+        Potential Security Impact: Remote: Arbitrary Code Execution, Denial of Service (DoS)
+
+        Source: Hewlett Packard Enterprise, HPE Product Security Response Team
+
+        VULNERABILITY SUMMARY: Multiple Vulnerabilities in Expat XML processing library
+
+        Note: Information originally published in ARUBA-PSA-2022-010  Non-HPE site
+
+        Aruba Product Security Advisory
+        ===============================
+        Advisory ID: ARUBA-PSA-2022-010
+        CVE: CVE-2022-25235, CVE-2022-25236, CVE-2022-25313,
+        CVE-2022-25314, CVE-2022-25315
+        Publication Date: 2022-May-17
+        Last Update: 2022-Jun-01
+        Status: Investigating
+        Severity: Critical
+        Revision: 2
+        Overview
+
+        Multiple CVEs have been disclosed that involve the faulty handling of XML input by the Expat application and library. These CVEs impact multiple Aruba products.
+
+        Details can be found at: 
+
+        https://nvd.nist.gov/vuln/detail/CVE-2022-25235  (Non-HPE site)
+        https://nvd.nist.gov/vuln/detail/CVE-2022-25236  (Non-HPE site)
+        https://nvd.nist.gov/vuln/detail/CVE-2022-25313  (Non-HPE site)
+        https://nvd.nist.gov/vuln/detail/CVE-2022-25314  (Non-HPE site)
+        https://nvd.nist.gov/vuln/detail/CVE-2022-25315  (Non-HPE site)
+
+        Affected Products
+        AirWave Management Platform
+        8.2.14.0 and below
+        Aruba Fabric Composer (AFC) and Plexxi Composable Fabric Manager (CFM)
+        6.2.0 and below
+        Aruba ClearPass Policy Manager
+        6.10.4 and below
+        6.9.10 and below
+        6.8.9 without Hotfix for Q1 2022 Security issues
+        Aruba EdgeConnect Enterprise
+        ECOS 9.1.1.3 and below
+        ECOS 9.0.6.0 and below
+        ECOS 8.3.6.0 and below
+        Impact of this vulnerability on ECOS is very low.
+        Aruba EdgeConnect Enterprise Orchestrator (on-premises)
+
+        See resolution section for details
+
+        Products Under Investigation
+        Aruba Analytics and Location Engine
+        Aruba Central / Central On-Premises
+        ArubaOS Wi-Fi Controllers and Gateways
+        ArubaOS SD-WAN Gateways
+        ArubaOS-CX Switches
+        Aruba VIA Client
+
+        Unaffected Products
+        Aruba Instant / Aruba Instant Access Points
+        Aruba Instant On
+        Aruba IntroSpect
+        Aruba NetEdit
+        Aruba User Experience Insight (UXI)
+        ArubaOS-S Switches
+        Aruba EdgeConnect Enterprise Orchestrator-as-a-Service
+        Aruba EdgeConnect Enterprise Orchestrator-SP
+        Aruba EdgeConnect Enterprise Orchestrator Global Enterprise
+        Other Aruba products not listed above are also not known to be affected by these vulnerabilities.
+
+
+      https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbnw04308en_us"
+
+    utter_CVE_2022_21131_info:
+      - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04297en_us 
+      https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04293en_us
+      https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04289en_us
+      https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04315en_us
+      https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04301en_us
+      https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbst04295en_us"
+
+    utter_CVE_2022_0005_info:
+      - text: "VULNERABILITY SUMMARY: A security vulnerability in HPE ProLiant Servers for some Intel Processors with Software Guard Extensions (SGX) could be physically exploited to allow disclosure of information. For more information on this vulnerability, please see Intel Security Advisory INTEL-SA-00614, 2022.1 IPU Intel SGX Advisory.
+      
+      Potential Security Impact: Local: Disclosure of Information
       Source: Hewlett Packard Enterprise, HPE Product Security Response Team
+      
+      RESOLUTION: HPE has provided updated BIOS firmware to address this vulnerability in Software Guard Extensions (SGX).
+      Download the firmware for your product on HPE Support Center.
+      
+      https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04288en_us"
 
-      VULNERABILITY SUMMARY: Multiple Vulnerabilities in Expat XML processing library
+    utter_CVE_2022_0154_info:
+      - text: "VULNERABILITY SUMMARY: Security vulnerabilities in HPE Synergy Servers using certain Intel processors could be locally exploited to allow escalation of privilege, or disclosure of information. For more information on these vulnerabilities, please see Intel Security Advisory INTEL-SA-00601, 2022.1 IPU Intel BIOS Advisory. \n 
+      
+      Potential Security Impact: Local: Disclosure of Information, Escalation of Privilege \n
+      Source: Hewlett Packard Enterprise, HPE Product Security Response Team \n
+      
+      RESOLUTION: HPE has provided some specific System BIOS versions to address the vulnerabilities identified above:
+      Download the firmware for your product on HPE Support Center.
 
-      Note: Information originally published in ARUBA-PSA-2022-010  Non-HPE site
+      https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04292en_us"
 
-      Aruba Product Security Advisory
-      ===============================
-      Advisory ID: ARUBA-PSA-2022-010
-      CVE: CVE-2022-25235, CVE-2022-25236, CVE-2022-25313,
-      CVE-2022-25314, CVE-2022-25315
-      Publication Date: 2022-May-17
-      Last Update: 2022-Jun-01
-      Status: Investigating
-      Severity: Critical
-      Revision: 2
-      Overview
+    utter_joke:
+      - text: "What do you call a fake noodle? An Impasta!"
+      - text: "My wife told me to stop impersonating a flamingo. I had to put my foot down."
+      - text: "I went to buy some camo pants but couldnt find any."
+      - text: "I failed math so many times at school, I cant even count."
+      - text: "I used to have a handle on life, but then it broke."
+      - text: "I was wondering why the frisbee kept getting bigger and bigger, but then it hit me."
+      - text: "I heard there were many break-ins over at the car park. That is wrong on so many levels."
+      - text: "I want to die peacefully in my sleep, like my grandfather… Not screaming and yelling like the passengers in his car."
+      - text: "When life gives you melons, you might be dyslexic."
+      - text: "Dont you hate it when someone answers their own questions? I do."
+      - text: "It takes a lot of balls to golf the way I do."
 
-      Multiple CVEs have been disclosed that involve the faulty handling of XML input by the Expat application and library. These CVEs impact multiple Aruba products.
+    utter_CVE_2021_0190_info:
+      - text: "VULNERABILITY SUMMARY: Security vulnerabilities in HPE storage products using certain Intel processors could be locally exploited to allow escalation of privilege or disclosure of information. For more information on these vulnerabilities, please see Intel Security Advisory INTEL-SA-00601, 2022.1 IPU Intel BIOS Advisory. \n
 
-      Details can be found at: 
+      Potential Security Impact: Local: Disclosure of Information, Escalation of Privilege
+      Source: Hewlett Packard Enterprise, HPE Product Security Response Team \n \n
 
-      https://nvd.nist.gov/vuln/detail/CVE-2022-25235  (Non-HPE site)
-      https://nvd.nist.gov/vuln/detail/CVE-2022-25236  (Non-HPE site)
-      https://nvd.nist.gov/vuln/detail/CVE-2022-25313  (Non-HPE site)
-      https://nvd.nist.gov/vuln/detail/CVE-2022-25314  (Non-HPE site)
-      https://nvd.nist.gov/vuln/detail/CVE-2022-25315  (Non-HPE site)
+      RESOLUTION: HPE has provided updated firmware to address these vulnerabilities in Intel BIOS reference code firmware.
+      Download the firmware for your product on HPE Support Center. \n
+      https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbst04294en_us"
 
-      Affected Products
-      AirWave Management Platform
-      8.2.14.0 and below
-      Aruba Fabric Composer (AFC) and Plexxi Composable Fabric Manager (CFM)
-      6.2.0 and below
-      Aruba ClearPass Policy Manager
-      6.10.4 and below
-      6.9.10 and below
-      6.8.9 without Hotfix for Q1 2022 Security issues
-      Aruba EdgeConnect Enterprise
-      ECOS 9.1.1.3 and below
-      ECOS 9.0.6.0 and below
-      ECOS 8.3.6.0 and below
-      Impact of this vulnerability on ECOS is very low.
-      Aruba EdgeConnect Enterprise Orchestrator (on-premises)
+    utter_ask_email: 
+      - text: Can you please provide me your email id?
 
-      See resolution section for details
+    utter_ask_otp:
+      - text: Thank you for email id, can you please provide the OTP at your mail id?
 
-      Products Under Investigation
-      Aruba Analytics and Location Engine
-      Aruba Central / Central On-Premises
-      ArubaOS Wi-Fi Controllers and Gateways
-      ArubaOS SD-WAN Gateways
-      ArubaOS-CX Switches
-      Aruba VIA Client
+    utter_autheticated_successfully:
+      - text: Thank you for the information, I have authenticated you sucessfully. Your email id is {email}
 
-      Unaffected Products
-      Aruba Instant / Aruba Instant Access Points
-      Aruba Instant On
-      Aruba IntroSpect
-      Aruba NetEdit
-      Aruba User Experience Insight (UXI)
-      ArubaOS-S Switches
-      Aruba EdgeConnect Enterprise Orchestrator-as-a-Service
-      Aruba EdgeConnect Enterprise Orchestrator-SP
-      Aruba EdgeConnect Enterprise Orchestrator Global Enterprise
-      Other Aruba products not listed above are also not known to be affected by these vulnerabilities.
+    utter_authetication_failed:
+      - text: Sorry, I could not authenticate you. Please try again.
 
+actions:
+  - action_authenticated
 
-    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbnw04308en_us"
-  
-  utter_CVE_2022_21131_info:
-    - text: "https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04297en_us 
-    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04293en_us
-    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04289en_us
-    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04315en_us
-    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04301en_us
-    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbst04295en_us"
-  
-  utter_CVE_2022_0005_info:
-    - text: "VULNERABILITY SUMMARY: A security vulnerability in HPE ProLiant Servers for some Intel Processors with Software Guard Extensions (SGX) could be physically exploited to allow disclosure of information. For more information on this vulnerability, please see Intel Security Advisory INTEL-SA-00614, 2022.1 IPU Intel SGX Advisory.
-    
-    Potential Security Impact: Local: Disclosure of Information
-    Source: Hewlett Packard Enterprise, HPE Product Security Response Team
-    
-    RESOLUTION: HPE has provided updated BIOS firmware to address this vulnerability in Software Guard Extensions (SGX).
-    Download the firmware for your product on HPE Support Center.
-    
-    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04288en_us"
+forms:
+  auth_form:
+    email:
+    - type: from_entity
+      entity: email
+    otp:
+    - type: from_entity
+      entity: number
 
-  utter_CVE_2022_0154_info:
-    - text: "VULNERABILITY SUMMARY: Security vulnerabilities in HPE Synergy Servers using certain Intel processors could be locally exploited to allow escalation of privilege, or disclosure of information. For more information on these vulnerabilities, please see Intel Security Advisory INTEL-SA-00601, 2022.1 IPU Intel BIOS Advisory. \n 
-    
-    Potential Security Impact: Local: Disclosure of Information, Escalation of Privilege \n
-    Source: Hewlett Packard Enterprise, HPE Product Security Response Team \n
-    
-    RESOLUTION: HPE has provided some specific System BIOS versions to address the vulnerabilities identified above:
-    Download the firmware for your product on HPE Support Center.
-
-    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbhf04292en_us"
-  
-  utter_joke:
-    - text: "What do you call a fake noodle? An Impasta!"
-    - text: "My wife told me to stop impersonating a flamingo. I had to put my foot down."
-    - text: "I went to buy some camo pants but couldnt find any."
-    - text: "I failed math so many times at school, I cant even count."
-    - text: "I used to have a handle on life, but then it broke."
-    - text: "I was wondering why the frisbee kept getting bigger and bigger, but then it hit me."
-    - text: "I heard there were many break-ins over at the car park. That is wrong on so many levels."
-    - text: "I want to die peacefully in my sleep, like my grandfather… Not screaming and yelling like the passengers in his car."
-    - text: "When life gives you melons, you might be dyslexic."
-    - text: "Dont you hate it when someone answers their own questions? I do."
-    - text: "It takes a lot of balls to golf the way I do."
-  
-  utter_CVE_2021_0190_info:
-    - text: "VULNERABILITY SUMMARY: Security vulnerabilities in HPE storage products using certain Intel processors could be locally exploited to allow escalation of privilege or disclosure of information. For more information on these vulnerabilities, please see Intel Security Advisory INTEL-SA-00601, 2022.1 IPU Intel BIOS Advisory. \n
-
-    Potential Security Impact: Local: Disclosure of Information, Escalation of Privilege
-    Source: Hewlett Packard Enterprise, HPE Product Security Response Team \n \n
-
-    RESOLUTION: HPE has provided updated firmware to address these vulnerabilities in Intel BIOS reference code firmware.
-    Download the firmware for your product on HPE Support Center. \n
-    https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbst04294en_us"
-294en_us"
