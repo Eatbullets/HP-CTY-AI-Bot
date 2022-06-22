@@ -20,8 +20,8 @@ class AutheticatedAction(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        email=tracker.get_slot("email")
-        otp=tracker.get_slot("otp")
+        email = tracker.get_slot("email")
+        otp = tracker.get_slot("otp")
         if email is not None and otp is not None:
             dispatcher.utter_message(template="utter_autheticated_successfully")
         else:

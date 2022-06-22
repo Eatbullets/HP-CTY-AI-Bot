@@ -20,16 +20,24 @@ intents:
   - authentication
 
 entities:
-  - email
-  - number
+- email
+- number
 
 slots:
   email:
     type: text
     influence_conversation: false
+    mappings:
+      - type: from_text
+        intent: inform
+        entity: email
   otp:
     type: text
     influence_conversation: false
+    mappings:
+      - type: from_text
+        intent: inform
+        entity: number
 
 responses:
     utter_greet:
@@ -202,19 +210,19 @@ responses:
       https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=hpesbst04294en_us"
 
     utter_ask_email: 
-      - text: Can you please provide me your email id?
+      - text: "Can you please provide me your email id?"
 
     utter_ask_otp:
-      - text: Thank you for email id, can you please provide the OTP at your mail id?
+      - text: "Thank you for email id, can you please provide the OTP at your mail id?"
 
     utter_autheticated_successfully:
-      - text: Thank you for the information, I have authenticated you sucessfully. Your email id is {email}
+      - text: "Thank you for the information, I have authenticated you sucessfully. Your email id is {email}"
 
     utter_authetication_failed:
-      - text: Sorry, I could not authenticate you. Please try again.
+      - text: "Sorry, I could not authenticate you. Please try again."
 
 actions:
-  - action_authenticated
+- action_authenticated
 
 forms:
   auth_form:
@@ -225,3 +233,6 @@ forms:
     - type: from_entity
       entity: number
 
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
