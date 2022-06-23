@@ -28,14 +28,14 @@ slots:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_text
+      - type: from_entity
         intent: inform
         entity: email
   otp:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_text
+      - type: from_entity
         intent: inform
         entity: number
 
@@ -226,12 +226,9 @@ actions:
 
 forms:
   auth_form:
-    email:
-    - type: from_entity
-      entity: email
-    otp:
-    - type: from_entity
-      entity: number
+    required_slots:
+      - email
+      - otp
 
 session_config:
   session_expiration_time: 60
