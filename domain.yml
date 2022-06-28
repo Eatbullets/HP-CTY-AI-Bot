@@ -213,7 +213,7 @@ responses:
       - text: "Can you please provide me your email id?"
 
     utter_ask_otp:
-      - text: "Thank you for email id, can you please provide the OTP at your mail id?"
+      - text: "Thank you for email id, can you please provide the password at your mail id?"
 
     utter_autheticated_successfully:
       - text: "Thank you for the information, I have authenticated you sucessfully. Your email id is {email}"
@@ -221,8 +221,24 @@ responses:
     utter_authetication_failed:
       - text: "Sorry, I could not authenticate you. Please try again."
 
+    utter_email_not_registered:
+      - text: "Sorry, it seems your email address is not registered"
+      
+    utter_email_not_valid:
+      - text: "Please enter a valid email"
+
+    utter_otp_not_valid:
+      - text: "The password you entered is not valid"
+
+    utter_login_blocked:
+      - text: "you have reached maximum number of logins"
+
+    utter_login_blocked_duration:
+      - text: "you can try again later"
+
 actions:
 - action_authenticated
+- validate_auth_form
 
 forms:
   auth_form:
