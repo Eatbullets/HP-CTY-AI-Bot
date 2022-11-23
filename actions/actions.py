@@ -10,7 +10,7 @@
 from multiprocessing import Event
 from typing import Any, Text, Dict, List
 from database_utils.constants import EMAIL, OTP, REQUESTED_SLOT
-from database_utils.database_utils import is_valid_user
+from database_utils.database_utils import is_valid_otp, is_valid_user
 from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
@@ -20,7 +20,7 @@ from rasa_sdk.events import EventType, SlotSet
 class AutheticatedAction(Action):
 
     def name(self) -> Text:
-        return "action_autheticated"
+        return "action_authenticated"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -58,7 +58,7 @@ class ValidateAuthFormAction(FormValidationAction):
                 dispatcher.utter_message(template="utter_email_not_registered")
         return returned_slots
 
-    def validate_email(
+    def validate_otp(
         self,
         value: float,
         dispatcher: "CollectingDispatcher",

@@ -215,10 +215,10 @@ responses:
     utter_ask_otp:
       - text: "Thank you for email id, can you please provide the password at your mail id?"
 
-    utter_autheticated_successfully:
+    utter_authenticated_successfully:
       - text: "Thank you for the information, I have authenticated you sucessfully. Your email id is {email}"
 
-    utter_authetication_failed:
+    utter_authentication_failed:
       - text: "Sorry, I could not authenticate you. Please try again."
 
     utter_email_not_registered:

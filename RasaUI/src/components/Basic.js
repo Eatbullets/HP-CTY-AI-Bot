@@ -1,5 +1,5 @@
 import './chatBot.css';
-import react, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IoMdSend } from 'react-icons/io';
 import { BiBot, BiUser } from 'react-icons/bi';
 
@@ -111,11 +111,13 @@ function Basic() {
     }
 
     return (
-        <div>
-            {/* <button onClick={()=>rasaAPI("shreyas","hi")}>Try this</button> */}
-
-
-            <div className="container">
+        <div className='root'>
+            <div className="chat-title">
+            THIS IS A HPE CHATBOT
+            <br></br>
+            Technologies used : Rasa, ReactJS
+            </div>
+            <div className="container-main">
                 <div className="row justify-content-center">
 
                     <div className="card" style={stylecard}>
